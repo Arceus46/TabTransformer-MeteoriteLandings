@@ -6,8 +6,7 @@ Eksperimen klasifikasi biner pada dataset **Meteorite Landings** (The Meteoritic
 
 ## Ringkasan
 
-- **Tugas:** klasifikasi biner, kelas positif = *Fell* (sekitar 2,6% data, sangat tidak seimbang).
-- **Model utama:** TabTransformer dan FT-Transformer (implementasi PyTorch sendiri, bukan dari library).
+- **Model utama:** TabTransformer dan FT-Transformer.
 - **Baseline:** *Logistic Regression*, *Random Forest*, *HistGradientBoosting*.
 - **Temuan singkat:** FT-Transformer lebih baik daripada TabTransformer, tetapi model berbasis pohon (*Random Forest*) tetap menjadi yang terkuat pada data ini.
 
