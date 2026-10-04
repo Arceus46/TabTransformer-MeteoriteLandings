@@ -15,7 +15,7 @@ Eksperimen klasifikasi biner pada dataset **Meteorite Landings** (The Meteoritic
 
 | Item | Keterangan |
 |---|---|
-| Sumber | The Meteoritical Society, melalui [NASA Open Data Portal](https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh) |
+| Sumber | The Meteoritical Society, melalui [NASA Open Data Portal](https://www.kaggle.com/datasets/nasa/meteorite-landings/data) |
 | File | `meteorite-landings.csv` |
 | Ukuran awal | 45.716 baris, 10 kolom |
 | Setelah pembersihan | sekitar 43 ribu baris |
@@ -53,17 +53,6 @@ Catatan membaca hasil:
 - ROC-AUC kurang membedakan model (semua ≥ 0,979). PR-AUC lebih informatif.
 - Simpangan baku dihitung dari 5 pembagian acak yang saling tumpang tindih, jadi cenderung lebih optimistis daripada validasi silang berlapis.
 
-## Struktur Repositori
-
-```
-.
-├── NASA_Meteorite_TabTransformer.ipynb   # notebook utama (pipeline, model, multi-seed, FT-Transformer)
-├── meteorite-landings.csv                # dataset
-├── tabtransformer_nasa_meteorite.pth     # model TabTransformer contoh (satu run) + praproses + threshold
-└── README.md
-```
-
-> Model yang tersimpan adalah **contoh satu run**, bukan "model final" dari angka rata-rata di atas.
 
 ## Cara Menjalankan
 
@@ -104,12 +93,6 @@ best_thr = ckpt["best_thr"]
 - Hanya ada dua fitur kategorikal, sehingga *attention* pada TabTransformer bekerja pada dua token saja.
 - Kebaruan (belum ada penelitian terindeks yang memakai *tabular Transformer* pada dataset ini) baru dicek lewat pencarian web umum, belum lewat Scopus/Web of Science.
 
-## Rencana
-
-- [ ] Pencarian hiperparameter sistematis untuk semua model
-- [ ] Validasi silang berlapis dan uji signifikansi antar model
-- [ ] Ablasi terkontrol untuk fitur turunan
-- [ ] Model *Transformer* tabular lain (misalnya SAINT)
 
 ## Referensi
 
@@ -119,8 +102,4 @@ best_thr = ckpt["best_thr"]
 
 ## Penulis
 
-`[Nama]`, Informatika, Institut Teknologi Nasional (ITN) Malang.
-
-## Lisensi
-
-`[Pilih lisensi, mis. MIT, dan sesuaikan dengan lisensi dataset]`
+`[Dani Aqila Rosyidi]`, Informatika, Institut Teknologi Nasional (ITN) Malang.
