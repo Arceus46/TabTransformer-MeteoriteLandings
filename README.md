@@ -76,7 +76,7 @@ import torch
 print(torch.__version__, torch.cuda.is_available())
 ```
 
-Lalu buka `NASA_Meteorite_TabTransformer.ipynb` dan jalankan semua sel secara berurutan (**Restart → Run All**). Eksperimen multi-seed (5 seed × 4 model) memakan waktu belasan menit pada GPU, dan lebih lama pada CPU.
+Lalu buka `TabTransformer on Meteorite Landings.ipynb` dan jalankan semua sel secara berurutan (**Restart → Run All**). Eksperimen multi-seed (5 seed × 4 model) memakan waktu belasan menit pada GPU, dan lebih lama pada CPU.
 
 Memuat model tersimpan (berisi objek scikit-learn, sehingga butuh `weights_only=False`; **hanya untuk file buatan sendiri**):
 
